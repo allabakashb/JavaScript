@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script>
+        let url = 'https://raw.githubusercontent.com/allabakashb/JavaScript/master/basic/ES6/data.json';
+        let fetchData = () => new Promise((resolve, reject) => {
+            let request = new XMLHttpRequest();
+            request.open('GET', url);
+            request.onload = () => resolve(request.response);
+            request.onerror = () => reject(request.status);
+            request.send();
+        });
+        fetchData().then(data => JSON.parse(data)).then(console.log);
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+<!-- 
+   Note:: 
+    
+  -->

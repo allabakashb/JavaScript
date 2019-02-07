@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script>
+        let startTimer = (time) => {
+            return new Promise((resolve, reject) => {
+                if (isNaN(time)) {
+                    reject(new Error('Time must be a number'));
+                }
+                setTimeout(() => {
+                    resolve(`${time} seconds`);
+                },time * 1000);
+            });
+        };
+        startTimer(1).then((msg) => msg.toUpperCase()).then((msg) => console.log(msg));
+        startTimer('o2').then((msg) => console.log(msg));
+        startTimer(4).then((msg) => msg.toUpperCase()).then((msg) => console.log(msg));
+        startTimer(2).then((msg) => msg.toUpperCase()).then((msg) => console.log(msg));
+        startTimer(6).then((msg) => msg.toUpperCase()).then((msg) => console.log(msg));
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+<!-- 
+   Note:: 
+    
+  -->
