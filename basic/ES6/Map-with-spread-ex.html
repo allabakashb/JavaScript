@@ -1,0 +1,31 @@
+<html>
+<head>
+    <script>
+        let ZZ = new Map([
+            ['orgCode', '12C'],
+            ['address', {city: 'BLR', code: 1}],
+            ['postal', 'N/A']
+        ]);
+        let YY = new Map([
+            ['name', 'YY'],
+            ['address', {city: 'CHN', code: 3}],
+            ['type', 'hardware'],
+            ['openedIn', 1980]
+        ]);
+       let companies = new Map([...YY, ...ZZ, ['branches', 89]]);
+        companies.forEach((value, key) => {
+            console.log(key);
+            console.log(value);
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+<!-- 
+   Note:: 
+    For merging, elements must be within Array.
+    Merging two maps with common keys will lead to overridden values with right most map.
+    Maps can be merged with Arrays as well.
+  -->

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script>
+       let person = new Map();
+        person.set('name', 'AA');
+        person.set('age', 34);
+        person.set('address', { city: 'BLR', code: 1});
+        console.log(person);
+        console.log(person.get('')); //undefined
+        console.log(person.get('address'));
+        console.log(person.get('age'));
+        console.log(person.get('name'));
+        person.forEach((value, key) => {
+            console.log(key);
+            console.log(value);
+        });
+        console.log(person.delete('name'));
+        console.log(person.get('name'));
+        for (let entry of person.entries()) {
+            console.log(entry);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+<!-- 
+   Note:: 
+     Each entry in the map is  dimentional array.
+     Ex: [ [1, 'h'], [2, 'g']]
+     0th index = key, 1st index = value;
+  -->

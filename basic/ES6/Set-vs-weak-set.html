@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script>
+        let key1 = 5;
+        let key2 = { a: 7 };
+        let key3 = 5;
+        let key4 = key2;
+       let set = new Set();
+       let weakSet = new WeakSet();
+       set.add(key1);
+       set.add(key2);
+       set.add(key3);
+       set.add(key4);
+       //weakSet.add(key1); check Notes
+       weakSet.add(key2);
+       weakSet.add(key4);
+       console.log(set);
+       console.log(weakSet);
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+<!-- 
+   Note:: 
+     In the weak set , only objects are allowed to add.
+     adding premitives throws an error; 
+  -->

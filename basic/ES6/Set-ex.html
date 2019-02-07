@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script>
+       let person = new Set();
+        person.add(2);
+        person.add(3);
+        person.add(4);
+        console.log(person.add(null));
+        console.log(person.add(2));
+        console.log(person.entries());
+        console.log(person.values());
+        person.delete(2);
+        person.delete(5);
+        console.log(person.has(3));
+        console.log(person.has(2));
+        console.log(person.keys());
+        person.forEach((value, key, set) => {
+            console.log(key);
+            console.log(value);
+            console.log(set)
+        });
+        console.log('entries');
+        for (let key of person.entries()) {
+            console.log(key);
+        }
+        console.log('values');
+        for (let key of person.values()) {
+            console.log(key);
+        }
+        console.log('keys');
+        for (let key of person.keys()) {
+            console.log(key);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
+
+<!-- 
+   Note:: 
+     Set stores the values in key, value format where key and value are same.
+  -->
